@@ -11,7 +11,6 @@ const ProductPage=() => {
         method:"GET",
         path:'/products'
     }));
-    console.log(data)
     return <Layout>
         <div className="bg-white">
         <div className=" sm:py-8 sm:px-6 lg:max-w-7xl lg:px-4">
