@@ -1,9 +1,10 @@
 
-import React, {useEffect} from 'react';
+import React from 'react';
 import GlobalLayout from './pages/_layout'
 
-const DynamicIndex = React.lazy(() => import('./pages/index'));
-const DynamicProductIndex = React.lazy(() => import('./pages/products/index'));
+const DynamicHome = React.lazy(() => import('./pages/index'));
+const DynamicCart = React.lazy(() => import('./pages/cart/index'));
+const DynamicProducts = React.lazy(() => import('./pages/products/index'));
 const DynamicProductId = React.lazy(() => import('./pages/products/[id]'));
 
 
@@ -12,15 +13,17 @@ export const routes = [
     path: '/',
     element: <GlobalLayout />,
     children: [
-      { path: '/', element: <DynamicIndex />, index: true},
-      { path: '/products', element: <DynamicProductIndex />, index: true},
+      { path: '/', element: <DynamicHome />, index: true},
+      { path: '/cart', element: <DynamicCart />, index: true},
+      { path: '/products', element: <DynamicProducts />, index: true},
       { path: '/products/:id', element: <DynamicProductId />, },
     ]
   }
 ]
 
 export const pages = [
-  { route: './' },
+  { route: '/' },
+  { route: '/cart' },
   { route: '/products' },
   { route: '/products/:id' },
 ]

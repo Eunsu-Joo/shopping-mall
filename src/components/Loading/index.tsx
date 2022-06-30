@@ -1,5 +1,16 @@
 import styled from "styled-components";
-
+const ContainerBox= styled.div`
+height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  p{
+    margin-top: 20px;
+    letter-spacing: 5px;
+    font-size: 1.5rem;
+  }
+`
 const Load= styled.div`
   display: inline-block;
   position: relative;
@@ -7,7 +18,6 @@ const Load= styled.div`
   height: 120px;
   transform: rotate(45deg);
   transform-origin: 40px 40px;
-  border: 1px solid black;
   div{
     top: 32px;
     left: 32px;
@@ -56,11 +66,11 @@ const Load= styled.div`
 `
 const Loading=() => {
 
-    return <div>
+    return <ContainerBox>
         <Load>
             <div/>
         </Load>
         <p>Loading..</p>
-    </div>
+    </ContainerBox>
 }
 export default Loading

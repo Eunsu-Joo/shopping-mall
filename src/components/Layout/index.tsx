@@ -1,9 +1,10 @@
+import React from "react";
 
 type Layout={
-    children:JSX.Element
+    children:JSX.Element | React.ReactNode
 }
 const Layout=({children}:Layout) => {
-    return <section className=" container rounded-2xl border-slate-200 border my-24 overflow-hidden px-16 py-8 shadow-lg min-h-screen">
+    return <section className=" container rounded-2xl border-slate-200 border my-24 overflow-hidden  shadow-lg min-h-screen">
         {children}
     </section>
 }
